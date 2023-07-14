@@ -1,3 +1,27 @@
 @section Intro {
    <h3>Ruby Chaulagain</h3>
 }
+
+
+@using (Html.BeginForm("Intro","Home", FormMethod.Post, new { id= "IntroForm", @class="form-horizontal"}))
+{
+    <div class="form-group">
+        @Html.Label("Number 1")
+        @Html.TextBox("Number1", null, new {@class="form-control", @placeholder= "Please enter a number", @type= "number"})
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Number 2")
+        @Html.TextBox("Number2", null, new {@class="form-control", @placeholder= "Please enter another number", @type= "number"})
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Output")
+    </div>
+
+    @Html.ActionLink("Submit", null , null, htmlAttributes: new {@class= "btn btn-success"})
+
+}
+
+
+
